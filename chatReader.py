@@ -10,7 +10,7 @@ def ReadChats():
     if(len(sys.argv)) <= 1:
         print("No file Path Provided")
         return None
-    filename = sys.argv[1]#"result.json"
+    filename = sys.argv[1] + "\/result.json"#"result.json"
     print(filename)
     if not os.path.exists(filename):
         print("File does not exist")

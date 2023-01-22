@@ -109,7 +109,7 @@ def AddWordCloud(names):
 	wordcloudChats = WordCloud(stopwords = stopwords, background_color="white", width = 700, height = 700).generate(words)
 	wordcloudChats.to_file("wordCloud.png")
 
-	html = open('first_figure.html')
+	html = open('AnalysisResult.html')
 	soup = bs(html, 'html.parser')
       
 	divs = soup.find_all("div")
@@ -135,7 +135,7 @@ def AddWordCloud(names):
     # Appending new div to html tree
 	# soup.append(new_img)
     # Alter HTML file to see the changes done
-	with open("first_figure.html", "wb") as f_output:
+	with open("AnalysisResult.html", "wb") as f_output:
 		f_output.write(soup.prettify("utf-8"))
 
 
